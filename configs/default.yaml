@@ -1,0 +1,73 @@
+# ============================================================
+# IoT Adversarial IDS — Default Configuration
+# ============================================================
+# Amar Sohail | AllysAI
+# ============================================================
+
+seed: 42
+
+data:
+  data_dir: "data/"
+  force_synthetic: false  # Set true to skip NSL-KDD download
+
+model_dir: "checkpoints/"
+
+# --- Random Forest ---
+random_forest:
+  n_estimators: 200
+  max_depth: null
+  min_samples_split: 5
+
+# --- Deep Neural Network ---
+dnn:
+  hidden_dims: [256, 128, 64, 32]
+  dropout: 0.3
+  lr: 0.001
+  weight_decay: 0.0001
+  epochs: 30
+  batch_size: 256
+
+# --- Autoencoder ---
+autoencoder:
+  hidden_dims: [128, 64]
+  latent_dim: 16
+  lr: 0.001
+  epochs: 30
+  batch_size: 256
+  threshold_percentile: 95.0
+
+# --- Adversarial Attacks ---
+attacks:
+  max_test_samples: 5000
+  default_epsilon: 0.1
+
+  fgsm:
+    epsilons: [0.05, 0.1, 0.2]
+
+  pgd:
+    epsilons: [0.05, 0.1]
+    alpha: 0.01
+    num_steps: 40
+
+  cw:
+    c: 1.0
+    kappa: 0.0
+    num_steps: 200
+    lr: 0.01
+    max_samples: 1000
+
+# --- Defenses ---
+defenses:
+  adversarial_training:
+    epsilon: 0.1
+    alpha: 0.01
+    pgd_steps: 10
+    epochs: 15
+    batch_size: 256
+    lr: 0.0005
+
+  feature_squeezing:
+    bit_depth: 4
+
+  spatial_smoothing:
+    window_size: 3
