@@ -1,6 +1,6 @@
 # AI-Powered IoT Intrusion Detection System with Adversarial Robustness Testing
 
-**Author:** Amar Sohail — CTO at [AllysAI](https://allysai.com), MS Computer Science, PLOS ONE (Q1) published researcher on IoT/RPL security and distributed systems.
+**Author:** Muneeb Ahmad — CTO at [AllysAI](https://allysai.com), MS Computer Science, PLOS ONE (Q1) published researcher on IoT/RPL security and distributed systems.
 
 ## Motivation
 
@@ -218,7 +218,7 @@ iot-adversarial-ids/
 
 ## Author
 
-**Amar Sohail**
+**Muneeb Ahmad**
 - CTO at AllysAI
 - Published: PLOS ONE (Q1) — IoT/RPL security in distributed networks
 - Research focus: AI-powered security for IoT, adversarial machine learning, formal verification, post-quantum cryptography
